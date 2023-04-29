@@ -1,90 +1,270 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>らーゆ</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-</head>
-<body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="http://talkindata.wp.xdomain.jp/wp-content/uploads/2023/01/Raayu.png">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#" class="login"></a>
-      </div>
-    </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-      </div>
-    </div>
-  </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>らーゆ</title>
+	<style>
+		body {
+  background-color: #f5f5f5;
+}
+
+/* ヘッダーのスタイル */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+/* ヘッダー内のテキストスタイル */
+header h1 {
+  margin: 0;
+  justify-content: space-between;
+  z-index: 9999; /* 他の要素よりも手前に表示するための値 */
+}
+#menu {
+  display: none;
+  justify-content: space-between;
+  z-index: 9999; /* 他の要素よりも手前に表示するための値 */
+}
+
+@media only screen and (min-width: 768px) {
+  /* ウィンドウの幅が768px以上の場合に表示する */
+  #menu {
+    display: block;
+
+}
+  }
+/* ナビゲーションバーのスタイル */
+nav {
+  background-color: #ddd;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+/* ナビゲーションリンクのスタイル */
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+    justify-content: space-between;
+
+  display: none;
+}
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  display: none;
+  z-index: 9999;
+}
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu ul li {
+  display: block;
+}
+
+#menu ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  background-color: #fff;
+}
+
+#menu ul li a:hover {
+  background-color: #f2f2f2;
+/* メインコンテンツのスタイル */
+main {
+  margin: 20px;
+  display: flex;
+  flex-direction: column; /* 縦並びにする */
+  align-items: center; /* 中央揃え */
+}
+
+/* プロフィールのスタイル */
+.profile {
+  width: 30%;
+}
+
+.profile img {
+  width: 100%;
+  height: auto;
+}
+
+.profile h2 {
+  margin-top: 0;
+}
+
+/* 自己紹介のスタイル */
+.intro {
+  width: 65%;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* フッターのスタイル */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+/* グラデーションを背景に追加 */
+body {
+  background: linear-gradient(to bottom, #fff, #f2f2f2);
+}
+
+/* ボタンのスタイル */
+button {
+  background-color: #555;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content {
+  animation: fadeIn 1s ease-in-out;
+  animation-fill-mode: both;
+}
+/* ボタンにマウスが乗った時のアニメーション */
+button:hover {
+  background-color: #f44336;
+  color: white;
+  transform: scale(1.1);
+}
+	</style>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>らーゆの紹介</h1>
+<button id="menu-button">Menu</button>
+<nav id="menu">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main>
+      <section id="about" style="animation-delay: 0.2s;">
+        <h2>About Me</h2>
+        <div class="content" style="animation-delay: 0.2s;">
+          <img src="https://pbs.twimg.com/profile_images/1605120889866944512/xZOiXIzn_400x400.jpg" alt="raayucorp">
+          <p>らーゆです。Twitterで普通に生きています。</p>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="content" style="animation-delay: 0.4s;">
+          <ul>
+            <li>PCいじり</li>
+            <li>ilustrator</li>
+            <li>Twitter(？)</li>
+            <li>Photoshop</li>
+          </ul>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
+      </section>
+
+      <section id="contact" >
+        <h2>Contact</h2>
+        <div class="content" style="animation-delay: 0.6s;">
+          <form>
+            <div>
+              <label for="name">名前</label>
+              <input type="text" id="name" name="name">
+            </div>
+            <div>
+              <label for="email">メールアドレス</label>
+              <input type="email" id="email" name="email">
+            </div>
+            <div>
+              <label for="message">メッセージ</label>
+              <textarea id="message" name="message"></textarea>
+            </div>
+            <button type="submit">送信</button>
+          </form>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
-    </div>
-  </footer>
-</body>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Raayu.All rights reserved.</p>
+    </footer>
+
+    <script>
+      // 固定ヘッダー・フッターを表示する
+      const header = document.querySelector('header');
+      const footer = document.querySelector('footer');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('fixed');
+          footer.classList.add('fixed');
+        } else {
+          header.classList.remove('fixed');
+          footer.classList.remove('fixed');
+        }
+      });
+
+      // ボタンにホバー時のスタイルを追加する
+      const buttons = document.querySelectorAll('button');
+      buttons.forEach(button => {
+        button.addEventListener('mouseover', () => {
+          button.classList.add('hover');
+        });
+        button.addEventListener('mouseout', () => {
+          button.classList.remove('hover');
+        });
+      });
+      const menuButton = document.querySelector('#menu-button');
+const menu = document.querySelector('#menu');
+
+menuButton.addEventListener('click', function() {
+  if (menu.style.display === 'none') {
+    menu.style.display = 'block';
+  } else {
+    menu.style.display = 'none';
+  }
+});
+
+    </script>
+  </body>
 </html>
