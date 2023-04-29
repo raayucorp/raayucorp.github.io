@@ -25,6 +25,26 @@ input[type="button"]::focus {
 		body {
   background-color: #f5f5f5;
 }
+button {
+  background-color: #555;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ボタンにマウスが乗った時のアニメーション */
+button:hover {
+  background-color: #f44336;
+  color: white;
+  transform: scale(1.1);
+}
 
 /* ヘッダーのスタイル */
 header {
@@ -38,6 +58,9 @@ header {
   left: 0;
   width: 100%;
   z-index: 9999;
+backdrop-filter: blur(500px);
+backdrop-filter: blur(10px);
+opacity: 0.8;
 }
 
 /* ヘッダー内のテキストスタイル */
@@ -113,20 +136,33 @@ main {
   display: flex;
   flex-direction: column; /* 縦並びにする */
   align-items: center; /* 中央揃え */
+width: 80%;
+        /* 左右の余白を自動的に調整 */
+        margin: 0 auto;
+ filter: blur(40px);
 }
 
 /* プロフィールのスタイル */
 .profile {
   width: 30%;
+width: 80%;
+        /* 左右の余白を自動的に調整 */
+        margin: 0 auto;
 }
 
 .profile img {
   width: 100%;
   height: auto;
+width: 80%;
+        /* 左右の余白を自動的に調整 */
+        margin: 0 auto;
 }
 
 .profile h2 {
   margin-top: 0;
+width: 80%;
+        /* 左右の余白を自動的に調整 */
+        margin: 0 auto;
 }
 
 /* 自己紹介のスタイル */
@@ -135,6 +171,9 @@ main {
   text-align: justify;
   font-size: 18px;
   line-height: 1.5;
+width: 80%;
+        /* 左右の余白を自動的に調整 */
+        margin: 0 auto;
 }
 
 /* フッターのスタイル */
@@ -200,7 +239,8 @@ button:hover {
 </nav>
 
     </header>
-
+<h1>　</h1>
+<h1>　</h1>
     <main>
       <section id="about" style="animation-delay: 0.2s;">
         <h2>About Me</h2>
