@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <title>らーゆ</title>
 	<style>
+		#wrapper{
+/*描画されるテキストを中央寄せにする*/
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#particle{
+    width:100%;
+	height: 100vh;
+	vertical-align: bottom;/*canvasタグ下に余白が生まれるのを防ぐ*/
+}
+
 		.inner{
   width: 80%;
   margin: 0 auto;
@@ -270,6 +283,9 @@ button:hover {
     </header>
 <h1>　</h1>
 <h1>　</h1>
+	  <div id="wrapper">
+<canvas id="particle"></canvas>
+<!--/wrapper--></div>
     <main>
       <section id="about" style="animation-delay: 0.2s;">
         <h2>About Me</h2>
@@ -363,5 +379,14 @@ menuButton.addEventListener('click', function() {
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
+	  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="js/particleText.js"></script><!--https://github.com/55Kaerukun/particleText.jsからダウンロードして使用-->
+	  <script>
+		  $("#particle").particleText({
+text: "If you can dream it<br>you can do it.<br>日本語もいけるよ", // 表示させたいテキスト。改行の場合は<br>追加
+colors:["#fff","#ccc", "#ddd"], // パーティクルの色を複数指定可能
+speed: "high", // slow, middle, high の3つから粒子が集まる速さを選択
+});
+		  <\script>
   </body>
 </html>
