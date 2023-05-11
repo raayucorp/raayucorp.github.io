@@ -1,4 +1,6 @@
-### Hi there 👋
+### こんにちは！！
+#### らーゆです。というか、らーゆのウェブサイトのソースコードです。色々なサイトやChatGPTをもとにしています。定期的に更新をしています。
+#### うまく作っていけるようにしたいね。
 
 <!--
 **raayucorp/raayucorp** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
