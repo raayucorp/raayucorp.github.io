@@ -296,6 +296,9 @@ nav a {
   background-color: #fff;
   display: none;
   z-index: 9999;
+	  -webkit-backdrop-filter: blur(20px); /* ぼかしエフェクト */
+  backdrop-filter: blur(20px);
+  box-shadow: 0 5px 20px rgba(255, 152, 79, 0.5); /* 薄い影 */
 }
 #menu ul {
   list-style: none;
@@ -328,6 +331,10 @@ width: 80%;
         margin: 0 auto;
 	backdrop-filter: saturate(180%) blur(20px);
 	background-color: rgba(255,255,255,0.72);
+	  -webkit-backdrop-filter: blur(20px); /* ぼかしエフェクト */
+  backdrop-filter: blur(20px);
+  box-shadow: 0 5px 20px rgba(255, 152, 79, 0.5); /* 薄い影 */
+	  background-color: rgba(255, 255, 255, 0.1); /* 背景色 */
 }
 
 /* プロフィールのスタイル */
