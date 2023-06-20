@@ -20,7 +20,19 @@
 	transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
 	opacity: 0.5;/*透過50%*/
 }
-
+.glass {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1); /* 背景色 */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* ボーダー */
+  border-right-color: rgba(255, 255, 255, 0.2);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(20px); /* ぼかしエフェクト */
+  backdrop-filter: blur(20px);
+  box-shadow: 0 5px 20px rgba(255, 152, 79, 0.5); /* 薄い影 */
+}
 .slider .slick-slide.slick-center{
 	transform: scale(1);/*中央の画像のサイズだけ等倍に*/
 	opacity: 1;/*透過なし*/
@@ -443,6 +455,7 @@ button:hover {
         <div class="content" style="animation-delay: 0.2s;">
           <img src="https://nitter.fdn.fr/pic/pbs.twimg.com%2Fprofile_images%2F1605120889866944512%2FxZOiXIzn.jpg" alt="raayucorp">
           <p>らーゆです。Twitterで普通に生きています。</p>
+		<div class="glass">
         </div>
       </section>
 
